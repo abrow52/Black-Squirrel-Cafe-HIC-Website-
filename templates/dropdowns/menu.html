@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menu - The Black Squirrel Cafe</title>
+
+    <link href="{{url_for('static', filename='assets/dist/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='assets/css/black-squirrel-theme.css') }}" rel="stylesheet" />
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<!-- NAVBAR -->
+<header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <svg class="navbar-icon ms-auto" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet" fill="#FCFCFA">
+                <g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)">
+                  <path d="M5885 7604 c-252 -45 -442 -136 -606 -291 -128 -121 -233 -293 -281 -458 -20 -71 -23 -102 -22 -265 0 -180 1 -187 31 -277 46 -138 120 -262 293 -491 192 -255 231 -316 329 -512 106 -215 173 -424 206 -651 21 -138 16 -439 -9 -559 -19 -93 -57 -226 -91 -316 -103 -274 -352 -565 -582 -683 -48 -24 -49 -21 -29 37 8 22 22 101 32 174 35 274 -3 524 -117 765 -89 187 -254 392 -401 496 -82 59 -210 119 -303 143 -101 26 -294 24 -396 -4 -235 -63 -401 -229 -465 -462 -27 -97 -24 -326 5 -435 26 -96 75 -204 137 -297 84 -126 325 -362 467 -456 37 -25 67 -49 67 -53 0 -5 -187 -9 -415 -9 -393 0 -417 -1 -469 -20 -105 -40 -178 -140 -180 -245 l-1 -60 425 -5 425 -5 115 -42 c454 -165 973 -197 1411 -87 670 167 1188 632 1435 1287 49 129 83 261 111 425 25 148 25 522 0 667 -63 360 -201 701 -457 1125 -201 333 -241 476 -190 674 26 103 63 168 135 241 143 143 363 199 575 146 41 -11 76 -18 78 -16 9 8 -128 150 -207 215 -258 212 -555 321 -866 319 -60 0 -146 -7 -190 -15z"/>
+                  <path d="M4590 7469 c-249 -65 -468 -262 -561 -505 l-24 -62 -63 -6 c-324 -34 -584 -187 -751 -446 -34 -52 -109 -189 -168 -304 l-105 -209 86 -83 c47 -46 107 -94 133 -107 320 -161 730 -38 936 280 24 38 60 102 79 143 61 126 138 146 200 53 25 -39 22 -95 -11 -191 -105 -302 -386 -557 -711 -647 -85 -24 -120 -28 -340 -35 -279 -8 -305 -15 -383 -93 -51 -51 -77 -116 -77 -194 l0 -53 226 0 c202 0 233 -2 296 -21 61 -19 86 -21 197 -16 69 3 180 15 246 27 242 44 486 36 674 -22 275 -85 534 -292 715 -571 80 -122 131 -236 191 -422 l52 -160 21 41 c11 22 32 81 46 130 78 272 83 555 16 819 -89 354 -243 615 -600 1020 -191 218 -253 303 -325 450 -77 157 -106 269 -113 436 -8 201 43 427 126 567 39 65 55 84 131 165 l35 37 -49 -1 c-28 0 -84 -9 -125 -20z m-710 -994 c0 -109 -62 -216 -156 -267 -64 -34 -158 -52 -229 -43 l-55 6 6 42 c19 135 80 234 177 283 52 27 77 32 170 33 l87 1 0 -55z"/>
+                </g>
+              </svg>
+            <a class="navbar-brand">The Black Squirrel Cafe | </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('menu') }}">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('checkout_page') }}">Checkout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('promotions') }}">Promotions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('events') }}">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('location_page') }}">Location</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="cartDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Cart <span class="badge bg-primary" id="navbar-cart-count">0</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="cartDropdown" style="min-width: 300px;">
+                      <div id="cart-items-dropdown">
+                        <!-- Cart items dynamically injected here -->
+                        <p class="text-center text-muted">Your cart is empty</p>
+                      </div>
+                      <div class="dropdown-divider"></div>
+                        
+                          <span class="fw-bold">Total: </span>
+                          <span id="navbar-cart-total" class="ms-1 fw-bold float-end">$0.00</span>
+                      
+                  
+                          <div class="dropdown-divider"></div>
+                  
+                      <a href="{{ url_for('checkout_page') }}" class="btn btn-primary w-100">Go to Checkout</a>
+                    </ul>
+                  </li>
+                  </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- About Us Section -->
+<div class="container marketing" style="padding-top: 80px;">
+    <p class="lead mb-5"></p>
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <h1 class="display-4 fw-bold mb-5">Menu</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <hr class="featurette-divider my-5" style="margin-bottom:1.5rem;" />
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="container flex-fill" style="max-width: 800px;">
+
+    <!-- =========== SEASONAL =========== -->
+    <div class="mb-4">
+        <button class="btn btn-primary w-100 d-flex justify-content-between align-items-center"
+            type="button" data-bs-toggle="collapse" data-bs-target="#seasonalCollapse">
+            <span class="fs-4 fw-semibold">Seasonal</span>
+            <span class="bi bi-chevron-down"></span>
+        </button>
+
+        <!-- ADDED: menu-group class -->
+        <div class="collapse mt-3 bg-white p-3 menu-group" id="seasonalCollapse">
+            <h6 class="fw-semibold mb-2">Food</h6>
+
+            <ul class="list-group mb-3 border-0">
+                <li class="list-group-item border-0">
+                    <div class="menu-item d-flex align-items-center">
+                        <img src="{{url_for('static', filename='images/pumpkinDoughnut.png')}}" class="me-3"
+                            style="width:80px;height:80px;object-fit:cover;border-radius:10px;">
+                        <div class="flex-grow-1"><h6 class="mb-1">Pumpkin Donut</h6></div>
+                        <button class="btn btn-sm btn-primary" onclick="addToCart(4)">Add to Cart</button>
+                        <span id="added-Pumpkin Donut" class="ms-2 text-success"></span>
+                    </div>
+                </li>
+            </ul>
+
+            <h6 class="fw-semibold mb-2">Drinks</h6>
+            <ul class="list-group border-0">
+                <li class="list-group-item border-0">
+                    <div class="menu-item d-flex align-items-center">
+                        <img src="{{url_for('static', filename='images/pumpkinSpiceLatte.png')}}" class="me-3"
+                            style="width:80px;height:80px;object-fit:cover;border-radius:10px;">
+                        <div class="flex-grow-1"><h6 class="mb-1">Pumpkin Spice Latte</h6></div>
+                        <button class="btn btn-sm btn-primary" onclick="addToCart(11)">Add to Cart</button>
+                        <span id="added-Pumpkin Spice Latte" class="ms-2 text-success"></span>
+                    </div>
+                </li>
+
+                <li class="list-group-item border-0">
+                    <div class="menu-item d-flex align-items-center">
+                        <img src="{{url_for('static', filename='images/appleTea.png')}}" class="me-3"
+                            style="width:80px;height:80px;object-fit:cover;border-radius:10px;">
+                        <div class="flex-grow-1"><h6 class="mb-1">Apple Tea</h6></div>
+                        <button class="btn btn-sm btn-primary" onclick="addToCart(10)">Add to Cart</button>
+                        <span id="added-Apple Tea" class="ms-2 text-success"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- =========== FOOD =========== -->
+    <div class="mb-4">
+        <button class="btn btn-light border w-100 d-flex justify-content-between align-items-center"
+            type="button" data-bs-toggle="collapse" data-bs-target="#foodCollapse">
+            <span class="fs-4 fw-semibold">Food</span>
+            <span class="bi bi-chevron-down"></span>
+        </button>
+
+        <!-- ADDED: menu-group class -->
+        <div class="collapse mt-3 bg-white p-3 menu-group" id="foodCollapse">
+            <ul class="list-group border-0">
+                <li class="list-group-item border-0">
+                    <div class="menu-item d-flex align-items-center">
+                        <img src="{{url_for('static', filename='images/brownie.png')}}" class="me-3"
+                            style="width:80px;height:80px;object-fit:cover;border-radius:10px;">
+                        <div class="flex-grow-1"><h6 class="mb-1">Brownie</h6></div>
+                        <button class="btn btn-sm btn-primary" onclick="addToCart(1)">Add to Cart</button>
+                        <span id="added-Brownie" class="ms-2 text-success"></span>
+                    </div>
+                </li>
+
+                <li class="list-group-item border-0">
+                    <div class="menu-item d-flex align-items-center">
+                        <img src="{{url_for('static', filename='images/blueberryMuffin.png')}}" class="me-3"
+                            style="width:80px;height:80px;object-fit:cover;border-radius:10px;">
+                        <div class="flex-grow-1"><h6 class="mb-1">Blueberry Muffin</h6></div>
+                        <button class="btn btn-sm btn-primary" onclick="addToCart(2)">Add to Cart</button>
+                        <span id="added-Blueberry Muffin" class="ms-2 text-success"></span>
+                    </div>
+                </li>
+
+                <li class="list-group-item border-0">
+                    <div class="menu-item d-flex align-items-center">
+                        <img src="{{url_for('static', filename='images/glazedDoughnut.png')}}" class="me-3"
+                            style="width:80px;height:80px;object-fit:cover;border-radius:10px;">
+                        <div class="flex-grow-1"><h6 class="mb-1">Glazed Donut</h6></div>
+                        <button class="btn btn-sm btn-primary" onclick="addToCart(3)">Add to Cart</button>
+                        <span id="added-Glazed Donut" class="ms-2 text-success"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- =========== DRINKS =========== -->
+    <div class="mb-4">
+        <button class="btn btn-light border w-100 d-flex justify-content-between align-items-center"
+            type="button" data-bs-toggle="collapse" data-bs-target="#drinksCollapse">
+            <span class="fs-4 fw-semibold">Drinks</span>
+            <span class="bi bi-chevron-down"></span>
+        </button>
+
+        <!-- ADDED: menu-group class -->
+        <div class="collapse mt-3 bg-white p-3 menu-group" id="drinksCollapse">
+            <ul class="list-group border-0">
+                <!-- Black Coffee -->
+                <li class="list-group-item border-0">
+                  <div class="menu-item d-flex align-items-center">
+                    <img src="{{url_for('static', filename='images/blackCofee.png')}}" class="me-3"
+                      style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px;">
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1">Black Coffee</h6>
+                    </div>
+                    <button class="btn btn-sm btn-primary" onclick="addToCart(5)">Add to Cart</button>
+                        <span id="added-Glazed Donut" class="ms-2 text-success"></span>
+                  </div>
+                </li>
+                <!-- Iced Coffee -->
+                <li class="list-group-item border-0">
+                  <div class="menu-item d-flex align-items-center">
+                    <img src="{{url_for('static', filename='images/icedCoffee.png')}}" class="me-3"
+                      style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px;">
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1">Iced Coffee</h6>
+                    </div>
+                    <button class="btn btn-sm btn-primary" onclick="addToCart(7)">Add to Cart</button>
+                        <span id="added-Glazed Donut" class="ms-2 text-success"></span>
+                  </div>
+                </li>
+                <!-- Matcha -->
+                <li class="list-group-item border-0">
+                  <div class="menu-item d-flex align-items-center">
+                    <img src="{{url_for('static', filename='images/matchaLatte.png')}}" class="me-3"
+                      style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px;">
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1">Matcha</h6>
+                    </div>
+                    <button class="btn btn-sm btn-primary" onclick="addToCart(6)">Add to Cart</button>
+                        <span id="added-Glazed Donut" class="ms-2 text-success"></span>
+                  </div>
+                </li>
+                <!-- Black Tea -->
+                <li class="list-group-item border-0">
+                  <div class="menu-item d-flex align-items-center">
+                    <img src="{{url_for('static', filename='images/blackTea.png')}}" class="me-3"
+                      style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px;">
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1">Black Tea</h6>
+                    </div>
+                    <button class="btn btn-sm btn-primary" onclick="addToCart(8)">Add to Cart</button>
+                        <span id="added-Glazed Donut" class="ms-2 text-success"></span>
+                  </div>
+                </li>
+                <!-- Green Tea -->
+                <li class="list-group-item border-0">
+                  <div class="menu-item d-flex align-items-center">
+                    <img src="{{url_for('static', filename='images/greenTea.png')}}" class="me-3"
+                      style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px;">
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1">Green Tea</h6>
+                    </div>
+                    <button class="btn btn-sm btn-primary" onclick="addToCart(9)">Add to Cart</button>
+                        <span id="added-Glazed Donut" class="ms-2 text-success"></span>
+                  </div>
+                </li>
+      
+              </ul>
+        </div>
+    </div>
+</main>
+
+<div class="container">
+  <hr class="featurette-divider my-5" style="margin-bottom:1.5rem;" />
+</div>
+
+<!-- FOOTER (kept your version) -->
+<footer class="text-light mt-5 pt-4 pb-3">
+  <div class="row g-0 text-center justify-content-center">
+      <div class="col-6 col-md-2 mb-3">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+          <a class="nav-link p-0 text-light">Contacts</a>
+          </li>
+          <li class="nav-item mb-2">
+          <a class="nav-link p-0 text-light"
+              >(330) 111-0011</a
+          >
+          </li>
+          <li class="nav-item mb-2">
+          <a class="nav-link p-0 text-light">bSquirrel@kent.edu</a>
+          </li>
+      </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-3">
+      <h5>Section</h5>
+      <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+          <a class="nav-link p-0 text-light">Hours</a>
+          </li>
+          <li class="nav-item mb-2">
+          <a  class="nav-link p-0 text-light"
+              >Monday-Friday: 6am-8:30pm</a
+          >
+          </li>
+          <li class="nav-item mb-2">
+          <a class="nav-link p-0 text-light">Saturday-Sunday: 9am-10pm</a>
+          </li>
+      </ul>
+      </div>
+  </div>
+  <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 py-4 my-4 border-top">
+      <p class="mb-0">&copy; 2025 Black Squirrel Coffee.</p>
+      <a href="#" id="back-up" class="text-light">Back to top</a>
+  </div>
+  </footer>
+<!-- <footer class="text-light mt-5 pt-4 pb-3">
+    <div class="container">
+      <p class="float-end"><a href="#" class="text-light">Back to top</a></p>
+      <p>&copy; 2025 Black Squirrel Coffee</p>
+    </div>
+  </footer>  -->
+
+<!-- Added-to-Cart Toast -->
+<!-- <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="cart-toast" class="toast align-items-center text-bg-success border-0" role="alert">
+        <div class="d-flex">
+            <div class="toast-body">
+                 Added to cart!
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                    data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div> -->
+
+
+<script src="{{url_for('static', filename='assets/dist/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{url_for('static', filename='dropdowns/cart.js')}}"></script>
+<script src="{{url_for('static', filename='checkout/checkout.js')}}" class="astro-vvvwv3sm"></script>
+
+</body>
+</html>

@@ -1,0 +1,715 @@
+
+/* Custom CSS page for our website. All custom styling and css in here. */
+
+* {
+    border-radius: 0;
+    border-width: 2px;
+  }
+  
+  /* Colors */
+  :root {
+    /* Brand Colors */
+    --dark-green: #405229;
+    --pistachio: #7A9951;
+    --light-pistachio: #f0fce1;
+    --pistachio-shadow: rgba(122, 153, 81, 0.2);
+    --cream: #FEFAE0;
+    --white: #FCFCFA;
+    --ash-gray: #575757;
+    --dark-gray: #333333;
+    --caramel: #FFD66E;
+    --caramel-light: rgba(255, 214, 110, 0.1);
+    --cherry: #E84B3C;
+    
+    /* Design Tokens */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 2px 8px var(--pistachio-shadow);
+    --transition: all 0.3s ease;
+    
+    /* Bootstrap Overrides */
+    --bs-primary: var(--pistachio);
+    --bs-secondary: var(--dark-green);
+    --bs-success: var(--pistachio);
+    --bs-body-bg: var(--white);
+    --bs-body-color: var(--dark-gray);
+  }
+  
+  /* Type */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-gray);
+  }
+  
+  body {
+    padding-top: 3rem;
+    padding-bottom: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+
+  /* Header and Footer */
+  header,
+  .navbar {
+    background-color: var(--dark-gray) !important;
+  }
+  header .navbar-brand,
+  header .nav-link,
+  .navbar .navbar-brand,
+  .navbar .nav-link {
+    color: var(--white) !important;
+    transition: var(--transition);
+  }
+  header .nav-link:hover,
+  .navbar .nav-link:hover {
+    color: var(--pistachio) !important;
+  }
+  .navbar .nav-link.active,
+  .navbar .nav-link[aria-current="page"],
+  header .nav-link.active,
+  header .nav-link[aria-current="page"] {
+    background-color: var(--pistachio);
+    border: 2px solid var(--dark-green);
+    color: var(--white) !important;
+    border-radius: var(--radius-md);
+    padding: 0.5rem 1rem !important;
+  }
+  
+  .navbar .nav-link.active:hover,
+  header .nav-link.active:hover {
+    background-color: var(--light-pistachio) !important;
+    border-color: var(--pistachio) !important;
+    color: var(--dark-gray) !important;
+  }
+  footer {
+    background-color: var(--dark-gray) !important;
+    color: var(--white) !important;
+  }
+  footer a { color: var(--white); transition: var(--transition); }
+
+  footer a:hover { color: var(--white) !important; }
+
+  footer #back-up:hover {
+    color: var(--pistachio) !important;
+  }
+
+  
+  .navbar-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar * {
+    color: var(--white) !important;
+  }
+
+  #navbar-cart-total{
+    margin-right: 43px;
+  }
+
+  
+  /* Buttons */
+  .btn {
+    border-radius: var(--radius-md);
+    border-width: 2px;
+    transition: var(--transition);
+  }
+  
+  /* Primary/Success Buttons */
+  .btn-primary,
+  .btn-success {
+    background-color: var(--pistachio) !important;
+    border-color: var(--dark-green) !important;
+    color: var(--white) !important;
+  }
+  
+  .btn-primary:hover,
+  .btn-success:hover {
+    background-color: var(--light-pistachio) !important;
+    border-color: var(--pistachio) !important;
+    color: var(--dark-gray) !important;
+  }
+  
+  /* Secondary/Outline Buttons */
+  .btn-outline-secondary,
+  .btn:not(.btn-primary):not(.btn-success):not(.btn-close) {
+    background-color: var(--white) !important;
+    border-color: var(--dark-gray) !important;
+    color: var(--dark-gray) !important;
+  }
+  
+  .btn-outline-secondary:hover,
+  .btn:not(.btn-primary):not(.btn-success):not(.btn-close):hover {
+    border-color: var(--caramel) !important;
+    background-color: var(--cream) !important;
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Button Hover Light (Special) */
+  .btn-hover-light {
+    color: var(--dark-gray);
+    background-color: var(--white);
+  }
+  
+  .btn-hover-light:hover,
+  .btn-hover-light:focus {
+    color: var(--pistachio);
+    background-color: var(--cream);
+  }
+  
+  
+  .container {
+    max-width: 1280px;
+  }
+  
+  /* Forms */
+  .form-control {
+    border-radius: var(--radius-md);
+  }
+  
+  .form-control:focus {
+    border-color: var(--pistachio);
+    box-shadow: 0 0 0 0.25rem var(--pistachio-shadow);
+  }
+  
+  .form-select:focus {
+    border-color: var(--pistachio);
+    box-shadow: 0 0 0 0.25rem var(--pistachio-shadow);
+  }
+  
+  .form-check-input:checked {
+    background-color: var(--pistachio);
+    border-color: var(--dark-green);
+  }
+  
+  .form-check-input:focus {
+    border-color: var(--pistachio);
+    box-shadow: 0 0 0 0.25rem var(--pistachio-shadow);
+  }
+  
+  .invalid-feedback {
+    color: var(--cherry);
+  }
+  
+  .input-group .form-control {
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+  }
+  
+  .input-group .btn {
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+
+  
+  /* Badge and Text Color Overrides */
+  .bg-primary {
+    background-color: var(--pistachio) !important;
+  }
+  
+  .text-primary {
+    color: var(--pistachio) !important;
+  }
+  
+  /* Brand white override */
+  .bg-white {
+    background-color: var(--white) !important;
+  }
+  
+  /* Interactive Cards */
+  .interactive-card {
+    border: 2px solid var(--ash-gray);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .interactive-card:hover {
+    border-color: var(--caramel);
+    background-color: var(--cream);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .interactive-card.selected {
+    border-color: var(--dark-green);
+    background-color: var(--light-pistachio);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Menu item rows */
+  .menu-item {
+    border: 2px solid var(--ash-gray);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    background-color: var(--white);
+    transition: var(--transition);
+    margin-bottom: 0.5rem;
+    cursor: default;
+  }
+  
+  /* Menu group (category collapse content) */
+  .menu-group {
+    border: 2px solid var(--ash-gray);
+    border-radius: var(--radius-md);
+    background-color: var(--white);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  /* Faster, smoother collapse (avoid mid-way pause) */
+  .collapsing {
+    transition: height .28s ease-in-out !important;
+    will-change: height;
+  }
+  
+  /* Ensure collapsed menu groups don't flash background mid-animation */
+  .collapse.menu-group:not(.show) {
+    background-color: var(--white);
+  }
+  
+  
+  /* Alerts and Notifications */
+  .alert-warning-custom {
+    border-left: 4px solid var(--caramel);
+    background-color: var(--caramel-light);
+    color: var(--dark-gray);
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 1rem;
+  }
+  
+  .status-good {
+    color: var(--pistachio);
+    font-weight: 600;
+  }
+  
+  .status-warning {
+    color: var(--cherry);
+    font-weight: 600;
+  }
+
+  .cart-popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #333;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 9999;
+  }
+
+  .cart-popup.show {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  .promotion-box {
+    border: 2px solid black;  /* border will become green if applied */
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .promotion-box.applied {
+      border-color: #28a745;        /* green border */
+      background-color: #e6f4ea;    /* light green background */
+  }
+
+  .promo-details {
+      display: none;                 /* start closed */
+      margin-top: 5px;
+      padding-left: 5px;
+      font-size: 0.9em;
+      color: #333;
+  }
+
+  .promotion-box.active .promo-details {
+      display: block;                /* expand on click */
+  }
+
+
+  /* Modals */
+  .modal-content {
+    border-radius: var(--radius-md);
+  }
+  
+  /* Dropdowns */
+  .dropdown-item-danger {
+    color: var(--cherry);
+  }
+  
+  .dropdown-item-danger:hover,
+  .dropdown-item-danger:focus {
+    color: var(--white);
+    background-color: var(--cherry);
+  }
+  
+  .dropdown-item-danger.active {
+    background-color: var(--cherry);
+  }
+  
+  /* Expanded dropdown custom styles */
+  .dropdown-menu.show {
+    background-color: var(--dark-green) !important;
+    border-color: var(--pistachio) !important;
+  }
+  
+  .dropdown-menu.show .dropdown-item {
+    background-color: var(--pistachio) !important;
+    color: var(--white) !important;
+    border-radius: var(--radius-md);
+    margin: 2px 0;
+  }
+  
+  .dropdown-menu.show .dropdown-item:hover,
+  .dropdown-menu.show .dropdown-item:focus {
+    background-color: var(--cream) !important;
+    color: var(--dark-green) !important;
+  }
+  
+  /* Calender Components */
+  .cal-month,
+  .cal-days,
+  .cal-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+  }
+  
+  .cal-month-name {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    text-align: center;
+  }
+  
+  .cal-weekday,
+  .cal-btn {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    padding: 0;
+  }
+  
+  .cal-btn:not([disabled]) {
+    font-weight: 500;
+    color: var(--dark-green);
+    background-color: var(--light-pistachio);
+    border: 2px solid var(--pistachio);
+  }
+  
+  .cal-btn:hover,
+  .cal-btn:focus {
+    background-color: var(--cream);
+    color: var(--dark-gray);
+    border-color: var(--caramel);
+  }
+  
+  .cal-btn[disabled] {
+    border: 0;
+    opacity: .5;
+  }
+  
+  /* Carousel */
+  .carousel {
+    margin-bottom: 4rem;
+    border: 2px solid var(--dark-gray);
+    border-radius: 8px;
+    background-color: var(--ash-gray);
+  }
+  
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+    background-color: var(--ash-gray);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-md);
+    color: var(--white);
+  }
+  
+  .carousel-caption h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  /* Ensure carousel heading contrast */
+  .carousel-caption h1 {
+    color: var(--white);
+    font-weight: 700;
+  }
+  
+  .carousel-item {
+    height: 32rem;
+    background-color: var(--ash-gray);
+  }
+  
+  .carousel-indicators [data-bs-target] {
+    background-color: var(--light-pistachio);
+  }
+  
+  .carousel-indicators .active {
+    background-color: var(--white);
+  }
+  
+  /* Marketing and Content */
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  
+  .featurette-divider {
+    margin: 5rem 0;
+  }
+  
+  .featurette-heading {
+    letter-spacing: -.05rem;
+  }
+  
+  /* Location page */
+  .location-card {
+    margin-bottom: 1rem;
+  }
+  
+  .location-card .text-muted,
+  .location-card p,
+  .location-card h6 {
+    text-align: left;
+  }
+  
+  .service-option {
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .location-info {
+    border: 2px solid var(--ash-gray);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    background-color: var(--white);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  /* Map Styles */
+  #map {
+    height: 400px;
+    width: 100%;
+    border: 2px solid var(--ash-gray);
+    border-radius: var(--radius-md);
+    z-index: 1;
+  }
+  
+  /* Confirm Button Visibility */
+  #confirmLocationBtn {
+    display: none;
+  }
+  
+  #confirmLocationBtn.visible {
+    display: inline-block;
+  }
+  
+  /* Leaflet Map Markers */
+  .cafe-marker,
+  .cafe-marker-selected,
+  .user-marker {
+    border: 2px solid var(--dark-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    line-height: 1;
+  }
+  
+  .cafe-marker {
+    background-color: var(--white);
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    padding-top: 5px;
+  }
+  
+  .cafe-marker-selected {
+    background-color: var(--light-pistachio);
+    border-color: var(--dark-green);
+    box-shadow: var(--shadow-md);
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    padding-top: 8px;
+  }
+  
+  .user-marker {
+    background-color: var(--white);
+    border-color: var(--cherry);
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    padding-top: 2px;
+  }
+  
+  /* Utility */
+  .w-220px {
+    width: 220px;
+  }
+  
+  .w-280px {
+    width: 280px;
+  }
+  
+  .w-340px {
+    width: 340px;
+  }
+  
+  .opacity-10 {
+    opacity: .1;
+  }
+  
+  /* Promotions */
+  .rewards-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    font-size: 1.5rem;
+    border: 2px solid var(--dark-gray);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    background-color: var(--white);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+  
+  .points-badge {
+    border: 2px solid var(--ash-gray);
+    background-color: var(--pistachio);
+    border-color: var(--dark-green);
+    color: var(--white);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  /* Featurettes for Promotions */
+  .featurette {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+    min-height: 450px; 
+    display: flex;
+    align-items: center; /* ensures vertical alignment works */
+  }
+  
+  .reward-current {
+    /* max-width: 400px; */
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reward-current .card-img-top {
+      height: 300px;
+      object-fit: cover;
+  }
+
+  .reward-muffin{
+    width: 340px !important;
+    height: auto !important;
+    object-fit: cover;   /* keeps it clean */
+    margin: 0 auto;
+  }
+
+  .reward-current .card-body {
+      flex-grow: 1;
+      padding: 0.75rem;
+      text-align: center;
+  }
+
+  .reward-row {
+    display: flex;
+    justify-content: center;
+    gap: 70px; /* adjust spacing */
+    flex-wrap: wrap;
+  }
+
+  .reward-row2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* adjust spacing */
+    flex-wrap: wrap;
+  }
+  
+  
+  
+  .featurette h2, 
+  .featurette p {
+    color: var(--dark-gray);
+    text-align: center;
+  }
+  
+  .featurette-image {
+    border: 2px solid black;
+  }
+
+  .event-img{
+    border: 3px solid black;
+    max-width: 500px;
+    height: auto;
+    
+  }
+  
+  /* Responsive */
+  @media (min-width: 40em) {
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 0rem;
+    }
+  }
+
+   
