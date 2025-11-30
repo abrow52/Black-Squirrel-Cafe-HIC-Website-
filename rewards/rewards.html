@@ -60,140 +60,99 @@
 
 <main>
   <div class="container" style="padding-top: 80px;">
-    <!-- About Us Section -->
-    <p class="lead mb-5"></p></p>
+
     <div class="row justify-content-center">
       <div class="col-lg-8 text-center">
         <h1 class="display-4 fw-bold mb-4">Promotions</h1>
-        <p class="lead mb-5">Rewards Points and Sweat Deals</p>
+        <p class="lead mb-5">Today's Sweet Deals!</p>
       </div>
     </div>
+
     <hr class="featurette-divider" />
 
+    <!-- CURRENT DEALS (SIDE BY SIDE) -->
+    <div class="row text-center">
 
-    <!-- REWARDS TITLE -->
-    <p class="lead mb-5"></p></p>
-    <div class="rewards-container">
-      <h2 class="section-title">Rewards Points: </h2>
-      <span class="points-badge">0</span>
-    </div>
-
-    <!-- REWARDS CAROUSEL -->
-    <p class="lead mb-5"></p></p>
-    <div id="rewardsCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#rewardsCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-      <button type="button" data-bs-target="#rewardsCarousel" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#rewardsCarousel" data-bs-slide-to="2"></button>
-    </div>
-    <div class="carousel-inner">
-
-      <div class="carousel-item active">
-        <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
-          <h2 class="carousel-caption">Brownie - 100 points</h2>
-        </div>
+      <!-- Deal 1 -->
+      <div class="col-md-6 mb-5">
+        <img src="../images/blueberryMuffin.png"
+             alt="Blueberry Muffin"
+             class="img-fluid mb-3"
+             style="max-width: 250px; border-radius: 12px;">
+        <h2 class="fw-normal">Free Blueberry Muffin!</h2>
+        <p class="lead">When you spend $5</p>
       </div>
 
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
-          <h2 class="carousel-caption">Iced Coffee - 250 points</h2>
-        </div>
+      <!-- Deal 2 -->
+      <div class="col-md-6 mb-5">
+        <img src="../images/blackCofee.png"
+             alt="Coffee"
+             class="img-fluid mb-3"
+             style="max-width: 250px; border-radius: 12px;">
+        <h2 class="fw-normal">50% Off Any Drink!</h2>
+        <p class="lead">With any order..</p>
       </div>
 
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
-          <h2 class="carousel-caption">Glazed Donut - 500 points</h2>
-        </div>
+    </div>
+
+    <hr class="featurette-divider" />
+
+    <!-- COMING SOON TITLE -->
+    <h2 class="text-center mb-4">Coming Soon!</h2>
+
+    <!-- COMING SOON CAROUSEL -->
+    <div id="comingSoonCarousel" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#comingSoonCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#comingSoonCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#comingSoonCarousel" data-bs-slide-to="2"></button>
       </div>
-    </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#rewardsCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#rewardsCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+      <div class="carousel-inner">
 
-  <p class="lead mb-5"></p></p>
-
-  <!-- PROMOTIONS FEATURETTES -->
-  <hr class="featurette-divider" />
-  <h2 class="mb-3 mt-5 text-center">Todays Sweat Deals!</h2>
-  <p class="lead mb-5"></p></p>
-  <hr class="featurette-divider" />
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">
-          Free Blueberry Muffin!
-        </h2>
-        <p class="lead">
-        <br>
-          With any order!
-        </p>
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex flex-column justify-content-center align-items-center" style="height: 400px;">
+            <img src="../images/gingerbread.png" class="img-fluid mb-3" style="max-height: 200px;" alt="Coming Soon">
+            <h3 class="fw-bold">Gingerbread Donut</h3>
+          </div>
         </div>
-        <div class="col-md-5 order-md-1">
-        <svg
-          aria-label="Placeholder: 500x500"
-          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-          height="500"
-          preserveAspectRatio="xMidYMid slice"
-          role="img"
-          width="500"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-        <title>Placeholder</title>
-        <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-bg)"
-        ></rect>
-        <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-          500x500
-        </text>
-      </svg>
-    </div>
-  </div>
 
-  <hr class="featurette-divider" />
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">
-          50% off any Drink!
-        </h2>
-        <p class="lead">
-        <br>
-          If you spend more than 10 dollars.
-        </p>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex flex-column justify-content-center align-items-center" style="height: 400px;">
+            <img src="../images/peppermintDrink.png" class="img-fluid mb-3" style="max-height: 200px;" alt="Coming Soon">
+            <h3 class="fw-bold">Peppermint Latte</h3>
+          </div>
         </div>
-        <div class="col-md-5 order-md-1">
-        <svg
-          aria-label="Placeholder: 500x500"
-          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-          height="500"
-          preserveAspectRatio="xMidYMid slice"
-          role="img"
-          width="500"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-        <title>Placeholder</title>
-        <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-bg)"
-        ></rect>
-        <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">
-          500x500
-        </text>
-      </svg>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="d-flex flex-column justify-content-center align-items-center" style="height: 400px;">
+            <img src="../images/hotchocolate.png" class="img-fluid mb-3" style="max-height: 200px;" alt="Coming Soon">
+            <h3 class="fw-bold"></h3>
+            <h3 class="fw-bold">Hot Chocolate</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#comingSoonCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#comingSoonCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
     </div>
+
+    <hr class="featurette-divider" />
+
   </div>
-
-  <hr class="featurette-divider" />
-
 </main>
 
       <!-- FOOTER -->
