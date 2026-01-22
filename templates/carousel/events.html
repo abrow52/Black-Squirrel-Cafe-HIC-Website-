@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="About The Black Squirrel Cafe" />
+    <meta
+      name="author"
+      content="Black Squirrel Cafe Team"
+    />
+    <meta name="generator" content="Astro v5.13.2" />
+    <title>Events: The Black Squirrel Cafe</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/carousel/"
+    />
+    <link href="{{url_for('static', filename='assets/dist/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <link href="{{url_for('static', filename='assets//css/black-squirrel-theme.css')}}" rel="stylesheet" />
+</head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <svg class="navbar-icon ms-auto" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet" fill="#FCFCFA">
+            <g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)">
+              <path d="M5885 7604 c-252 -45 -442 -136 -606 -291 -128 -121 -233 -293 -281 -458 -20 -71 -23 -102 -22 -265 0 -180 1 -187 31 -277 46 -138 120 -262 293 -491 192 -255 231 -316 329 -512 106 -215 173 -424 206 -651 21 -138 16 -439 -9 -559 -19 -93 -57 -226 -91 -316 -103 -274 -352 -565 -582 -683 -48 -24 -49 -21 -29 37 8 22 22 101 32 174 35 274 -3 524 -117 765 -89 187 -254 392 -401 496 -82 59 -210 119 -303 143 -101 26 -294 24 -396 -4 -235 -63 -401 -229 -465 -462 -27 -97 -24 -326 5 -435 26 -96 75 -204 137 -297 84 -126 325 -362 467 -456 37 -25 67 -49 67 -53 0 -5 -187 -9 -415 -9 -393 0 -417 -1 -469 -20 -105 -40 -178 -140 -180 -245 l-1 -60 425 -5 425 -5 115 -42 c454 -165 973 -197 1411 -87 670 167 1188 632 1435 1287 49 129 83 261 111 425 25 148 25 522 0 667 -63 360 -201 701 -457 1125 -201 333 -241 476 -190 674 26 103 63 168 135 241 143 143 363 199 575 146 41 -11 76 -18 78 -16 9 8 -128 150 -207 215 -258 212 -555 321 -866 319 -60 0 -146 -7 -190 -15z"/>
+              <path d="M4590 7469 c-249 -65 -468 -262 -561 -505 l-24 -62 -63 -6 c-324 -34 -584 -187 -751 -446 -34 -52 -109 -189 -168 -304 l-105 -209 86 -83 c47 -46 107 -94 133 -107 320 -161 730 -38 936 280 24 38 60 102 79 143 61 126 138 146 200 53 25 -39 22 -95 -11 -191 -105 -302 -386 -557 -711 -647 -85 -24 -120 -28 -340 -35 -279 -8 -305 -15 -383 -93 -51 -51 -77 -116 -77 -194 l0 -53 226 0 c202 0 233 -2 296 -21 61 -19 86 -21 197 -16 69 3 180 15 246 27 242 44 486 36 674 -22 275 -85 534 -292 715 -571 80 -122 131 -236 191 -422 l52 -160 21 41 c11 22 32 81 46 130 78 272 83 555 16 819 -89 354 -243 615 -600 1020 -191 218 -253 303 -325 450 -77 157 -106 269 -113 436 -8 201 43 427 126 567 39 65 55 84 131 165 l35 37 -49 -1 c-28 0 -84 -9 -125 -20z m-710 -994 c0 -109 -62 -216 -156 -267 -64 -34 -158 -52 -229 -43 l-55 6 6 42 c19 135 80 234 177 283 52 27 77 32 170 33 l87 1 0 -55z"/>
+            </g>
+          </svg>
+          <a class="navbar-brand">The Black Squirrel Cafe | </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('menu') }}">Menu</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="{{ url_for('checkout_page') }}">Checkout</a></li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('promotions') }}">Promotions</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{ url_for('events') }}">Events</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('location_page') }}">Location</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <!-- UNIVERSAL NAVBAR CART -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="cartDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Cart <span class="badge bg-primary" id="navbar-cart-count">0</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="cartDropdown" style="min-width: 300px;">
+                <div id="cart-items-dropdown">
+                  <!-- Cart items dynamically injected here -->
+                  <p class="text-center text-muted">Your cart is empty</p>
+                </div>
+                <div class="dropdown-divider"></div>
+                  
+                    <span class="fw-bold">Total: </span>
+                    <span id="navbar-cart-total" class="ms-1 fw-bold float-end">$0.00</span>
+                
+            
+                    <div class="dropdown-divider"></div>
+            
+                <a href="{{ url_for('checkout_page') }}" class="btn btn-primary w-100">Go to Checkout</a>
+              </ul>
+            </li>
+
+          </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About Us Content
+  ================================================== -->
+      <div class="container marketing" style="padding-top: 80px;">
+        <!-- About Us Section -->
+        <p class="lead mb-5"></p></p>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h1 class="display-4 fw-bold ">Events</h1>
+            <p class="lead mb-0">Join us for some community events!</p>
+          </div>
+        </div>
+        
+        <!-- START THE FEATURETTES -->
+        <hr class="featurette-divider" />
+        <p class="lead mb-5"></p></p>
+        <div class="row featurette align-items-center">
+          <div class="col-md-7 order-md-2 d-flex flex-column justify-content-center">
+            <h2 class="featurette-heading fw-normal lh-1">
+              Santa's Little Helpers
+            </h2>
+            <p class="lead">
+              <br>
+              Work with elves from Santa's Workshop to decorate Christmas cookies! The best decorated cookie will win a prize!
+              <br>
+              <br>
+              Date: 12/21/25  
+              <br>
+              <br>
+              Time: 5:00pm-7:00pm
+              <br>
+              <br>
+              Location: 1125 Risman Dr, Kent, OH 44242
+            </p>
+          </div>
+          <div class="col-md-5 d-flex justify-content-center align-items-center">
+            <img class="event-img"  src="{{ url_for('static', filename='images/elves2.png') }}"
+                        class="featurette-image img-fluid mx-auto"
+                        alt="Santa's Little Helpers event">
+            
+          </div>
+        </div>
+        <p class="lead mb-5"></p></p>
+        <hr class="featurette-divider" />
+        <p class="lead mb-5"></p></p>
+        <div class="row featurette align-items-center">
+          <div class="col-md-7 order-md-2 d-flex flex-column justify-content-center">
+            <h2 class="featurette-heading fw-normal lh-1">
+              Trivia Night
+            </h2>
+            <p class="lead">
+              <br>
+              Compete in a group or by yourself in a head to head trivia contest for a prize!
+              <br>
+              <br>
+              Date: 1/15/2026
+              <br>
+              <br>
+              Time: 5:00pm - 8:00pm
+              <br>
+              <br>
+              Location: 1125 Risman Dr, Kent, OH 44242
+            </p>
+          </div>
+          <div class="col-md-5 d-flex justify-content-center align-items-center">
+            <img class="event-img" src="{{ url_for('static', filename='images/trivia.png') }}"
+                        class="featurette-image img-fluid mx-auto"
+                        alt="Santa's Little Helpers event">
+          </div>
+        </div>
+        <p class="lead mb-5"></p></p>
+        <hr class="featurette-divider" />
+        <p class="lead mb-5"></p></p>
+        <div class="row featurette align-items-center">
+          <div class="col-md-7 order-md-2 d-flex flex-column justify-content-center">
+            <h2 class="featurette-heading fw-normal lh-1">
+              Comedy Show
+            </h2>
+            <p class="lead">
+              <br>
+              Enjoy some food and drinks while listening to a variety of comedians!
+              <br>
+              <br>
+              Date: 2/7/26
+              <br>
+              <br>
+              Time: 7:00pm - 10:00pm
+              <br>
+              <br>
+              Location: 1125 Risman Dr, Kent, OH 44242
+            </p>
+          </div>
+          <div class="col-md-5 d-flex justify-content-center align-items-center">
+            <img class="event-img"  src="{{ url_for('static', filename='images/comedy.png') }}"
+                        class="featurette-image img-fluid mx-auto"
+                        alt="Santa's Little Helpers event">
+          </div>
+        </div>
+        <p class="lead mb-5"></p></p>
+        <hr class="featurette-divider" />
+        <!-- /END THE FEATURETTES -->
+      </div>
+      <!-- /.container -->
+      
+    </main>
+
+      <!-- FOOTER -->
+      <footer class="text-light mt-5 pt-4 pb-3">
+        <div class="row g-0 text-center justify-content-center">
+            <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                <a class="nav-link p-0 text-light">Contacts</a>
+                </li>
+                <li class="nav-item mb-2">
+                <a class="nav-link p-0 text-light"
+                    >(330) 111-0011</a
+                >
+                </li>
+                <li class="nav-item mb-2">
+                <a class="nav-link p-0 text-light">bSquirrel@kent.edu</a>
+                </li>
+            </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                <a class="nav-link p-0 text-light">Hours</a>
+                </li>
+                <li class="nav-item mb-2">
+                <a  class="nav-link p-0 text-light"
+                    >Monday-Friday: 6am-8:30pm</a
+                >
+                </li>
+                <li class="nav-item mb-2">
+                <a class="nav-link p-0 text-light">Saturday-Sunday: 9am-10pm</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 py-4 my-4 border-top">
+            <p class="mb-0">&copy; 2025 Black Squirrel Coffee.</p>
+            <a href="#" id="back-up" class="text-light">Back to top</a>
+        </div>
+        </footer>
+        
+      <script src="{{url_for('static', filename='assets/dist/js/bootstrap.bundle.min.js')}}" class="astro-vvvwv3sm"></script>
+      <script src="{{url_for('static', filename='dropdowns/cart.js')}}"></script>
+      <script src="{{url_for('static', filename='checkout/checkout.js')}}" class="astro-vvvwv3sm"></script>
+
+  </body>
+</html>
