@@ -301,8 +301,8 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: #333;
-    color: white;
+    background: var(--ash-gray);
+    color: var(--white);
     padding: 12px 18px;
     border-radius: 8px;
     opacity: 0;
@@ -317,7 +317,7 @@
   }
 
   .promotion-box {
-    border: 2px solid black;  /* border will become green if applied */
+    border: 2px solid var(--dark-gray);  /* border will become green if applied */
     padding: 10px;
     margin-bottom: 5px;
     border-radius: 5px;
@@ -325,9 +325,18 @@
     transition: all 0.3s ease;
   }
 
+  .promotion-box2 {
+    border: 2px solid var(--dark-gray);  /* border will become green if applied */
+    /* padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; */
+  }
+
   .promotion-box.applied {
-      border-color: #28a745;        /* green border */
-      background-color: #e6f4ea;    /* light green background */
+      border-color: var(--pistachio);        /* green border */
+      background-color: var(--light-pistachio);    /* light green background */
   }
 
   .promo-details {
@@ -335,7 +344,11 @@
       margin-top: 5px;
       padding-left: 5px;
       font-size: 0.9em;
-      color: #333;
+      color: var(--dark-gray);
+  }
+
+  .promotion-box.active .promo-details {
+      display: block;                /* expand on click */
   }
 
   .promotion-box.active .promo-details {
@@ -683,11 +696,11 @@
   }
   
   .featurette-image {
-    border: 2px solid black;
+    border: 2px solid var(--dark-gray);
   }
 
   .event-img{
-    border: 3px solid black;
+    border: 3px solid var(--dark-gray);
     max-width: 500px;
     height: auto;
     

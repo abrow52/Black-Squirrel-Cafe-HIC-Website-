@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
     <meta name="generator" content="Astro v5.13.2" />
-    <title>The Black Squirrel Cafe | Home</title>
+    <title>Home: The Black Squirrel Cafe</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/" />
     <link href="{{ url_for('static', filename='assets/dist/css/bootstrap.min.css') }}" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
@@ -130,7 +130,46 @@
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-inner">
+                        <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="carousel-caption text-center">
+                            <h1>Library location now open!</h1>
+                            <p class="opacity-75">
+                                Stop by on 10/14 for first-day deals.
+                            </p>
+                            <p>
+                                <a class="btn btn-lg btn-primary" href="{{ url_for('location_page') }}">Get directions now</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="carousel-caption text-center">
+                            <h1>Winter seasonal menu items begins 12/15.</h1>
+                            <p>
+                                Visit the menu to order fall seasonal items while they are still in store.
+                            </p>
+                            <p><a class="btn btn-lg btn-primary" href="{{ url_for('menu') }}">Menu</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="carousel-caption text-center">
+                            <h1>Now hiring!</h1>
+                            <p>
+                                Visit us in person to apply!
+                            </p>
+                            <p>
+                                <a class="btn btn-lg btn-primary" href="{{ url_for('location_page') }}">Locations</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="container">
                         <div class="carousel-caption text-start">
@@ -147,7 +186,7 @@
                 <div class="carousel-item">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Winter seasonal menu items begins 12/15.</h1>
+                            <h1>Winter seasonal menu items begin 12/15.</h1>
                             <p>
                                 Visit the menu to order fall seasonal items while they are still in store.
                             </p>
@@ -168,7 +207,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>

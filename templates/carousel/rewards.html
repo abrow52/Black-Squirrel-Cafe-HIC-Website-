@@ -3,46 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Promotions · The Black Squirrel Cafe</title>
+  <title>Promotions: The Black Squirrel Cafe</title>
   <link href="{{url_for('static', filename='assets/dist/css/bootstrap.min.css')}}" rel="stylesheet" />
   <link href="{{url_for('static', filename='assets/css/black-squirrel-theme.css')}}" rel="stylesheet" />
-  <!-- <style>
-    /* Put the image behind the whole carousel */
-    #myCarousel {
-        background-image: url("{{ url_for('static', filename='images/acornBanner.png') }}");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 450px;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    /* Restore Bootstrap's correct positioning container */
-    #myCarousel .carousel-inner,
-    #myCarousel .carousel-item {
-        min-height: 450px;
-        background: transparent !important;
-        position: relative;
-    }
-    
-    /* IMPORTANT: captions must be absolute for correct layout */
-    #myCarousel .carousel-caption {
-        position: absolute;     /* Bootstrap default */
-        z-index: 3;
-        bottom: 35%;            /* controls vertical location */
-    }
-    
-    #myCarousel .carousel-control-prev,
-    #myCarousel .carousel-control-next {
-        z-index: 4;
-    }
-    
-    /* Remove any Bootstrap overlay */
-    #myCarousel .carousel-item::before {
-        display: none !important;
-    }
-    </style> -->
 </head>
 <body>
 
@@ -130,7 +93,7 @@
 
   <!-- Free Muffin Card -->
   <div >
-    <div class="card shadow-sm reward-current">
+    <div class="card shadow-sm reward-current promotion-box2">
         <img src="{{ url_for('static', filename='images/blueberryMuffin.png') }}" class="card-img-top reward-muffin" alt="Blueberry Muffin">
 
       <div class="card-body">
@@ -142,7 +105,7 @@
 
   <!-- 50% Off Drink Card -->
   <div >
-    <div class="card shadow-sm reward-current">
+    <div class="card shadow-sm reward-current promotion-box2">
         <img src="{{ url_for('static', filename='images/blackCofee.png') }}" class="card-img-top" alt="Blueberry Muffin">
 
       <div class="card-body">
@@ -161,7 +124,7 @@
 
 <div class="reward-row2">
   <div >
-    <div class="card shadow-sm reward-current">
+    <div class="card shadow-sm reward-current promotion-box2">
         <img src="{{ url_for('static', filename='images/greenTea.png') }}" class="card-img-top" alt="Blueberry Muffin">
 
       <div class="card-body">
@@ -173,7 +136,7 @@
 
   
   <div >
-    <div class="card shadow-sm reward-current">
+    <div class="card shadow-sm reward-current promotion-box2">
         <img src="{{ url_for('static', filename='images/hotchocolate.png') }}" class="card-img-top" alt="Blueberry Muffin">
 
       <div class="card-body">
@@ -184,7 +147,7 @@
   </div>
 
   <div >
-    <div class="card shadow-sm reward-current">
+    <div class="card shadow-sm reward-current promotion-box2">
         <img src="{{ url_for('static', filename='images/gingerbread.png') }}" class="card-img-top" alt="Blueberry Muffin">
 
       <div class="card-body">
@@ -195,45 +158,6 @@
   </div>
 
 </div>
-
-<!-- <div id="myCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-</div>
-<div class="carousel-inner">
-  <div class="carousel-item active">
-    <div class="container">
-      <div class="carousel-caption">
-          <h1>50% Off Hot Chocolate</h1>
-          <p class="opacity-95">
-              Begins 12/18
-          </p>
-      </div>
-  </div>
-  </div>
-  <div class="carousel-item">
-    <div class="container">
-      <div class="carousel-caption">
-          <h1>BOGO All Items!</h1>
-          <p class="opacity-95">
-              Begins 12/22
-          </p>
-      </div>
-  </div>
-  </div>
-  <div class="carousel-item">
-    <div class="container">
-      <div class="carousel-caption">
-          <h1>Free Gingerbread Cookie With Every Order</h1>
-          <p class="opacity-95">
-              Begins 12/15
-          </p>
-      </div>
-  </div>
-  </div>
-</div> -->
 
 <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -292,12 +216,6 @@
             <a href="#" id="back-up" class="text-light">Back to top</a>
         </div>
         </footer>
-      <!-- <footer class="text-light mt-5 pt-4 pb-3">
-        <div class="container">
-          <p class="float-end"><a href="#" class="text-light">Back to top</a></p>
-          <p>&copy; 2025 Black Squirrel Coffee</p>
-        </div>
-      </footer>     -->
 
       <script src="{{url_for('static', filename='assets/dist/js/bootstrap.bundle.min.js')}}"></script>
       <script src="{{url_for('static', filename='dropdowns/cart.js')}}"></script>
