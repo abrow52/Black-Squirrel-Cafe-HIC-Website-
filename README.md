@@ -6,7 +6,8 @@ To start the website either:
 - in a python terminal type: python app.py
 you will be given a link like this: http://127.0.0.1:5000, type this link into a browser to go to the site
 
-To create and connect to the database *shouldn't need to do for site to run*:
+*needed for the menu page to run*
+To create and connect to the database:
 - in bash terminal type: mysql
 - to create database type: create bs_cafe
 - to open the database: use bs_cafe
